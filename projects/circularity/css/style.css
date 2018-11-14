@@ -1,0 +1,16 @@
+/*body {
+     background-color: rgb(63, 147, 96);
+     -webkit-animation: random 10s infinite;
+     animation: random 10s infinite;
+}
+@keyframes  random {
+    20% { background-color: rgb(63, 147, 96); } 
+    40% { background-color: rgb(50, 94, 109); } 
+    60% { background-color: rgb(40, 99, 78); } 
+    80% { background-color: rgb(29, 56, 99); }
+    100% { background-color: rgb(84, 132, 87); }  
+}*/
+
+ body{
+    background-color: rgb(48, 96, 56); 
+}

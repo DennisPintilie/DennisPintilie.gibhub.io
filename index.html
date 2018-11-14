@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dennis's Amazing Website</title>
+        <style>
+            body {
+                background: rgb(165, 23, 50);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR2TDLvHx__rRDvki1O4mEYKpYrcsnP5Q1YqweNV6pvrwFXJP1wQ");
+            }
+            video {
+                margin:auto;
+                display:block;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin:auto;
+            }
+    
+            /* navigation menu */
+            nav {
+                background: rgb(28, 50, 150);
+                margin: 0 auto;
+                display: flex;
+                padding: 10px;
+                border: 1px solid;
+                border-radius: 10px;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: #ECDCCC;
+                display: flex;
+                margin-top: 30px;
+            }
+            .sidebar {
+                margin-left: 10px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 400px;
+            }
+            .content {
+                flex: 1;
+                padding: 25px;
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+        </style>
+    </head> 
+    
+    <body>
+        <div id="all-contents">
+            <nav>
+                <header>Dennis's Awesome Website</header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portofolio</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <div class="sidebar">
+                    <img src="https://ecuoradea2018.ro/wp-content/uploads/2018/06/oradea-4-460x263.jpg">
+                </div>
+                <div class="content">
+                    <header> Dennis Pintilie</header>
+                    <p> Student at Pearl River High School</p>
+                    <section class="interests">
+                        <header>Interests</header>
+                        <ul>
+                            <li>Soccer</li>
+                            <li>Gaming</li>
+                            <li>Traveling</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+            <video width="375" controls>
+                <source src="website-video.mp4" type="video/mp4">
+            </video>
+        </video>
+    </body>
+</html>
