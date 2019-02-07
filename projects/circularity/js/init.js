@@ -19,8 +19,8 @@ var init = function (window) {
         // ALL CODE GOES BELOW HERE                                   //
         ////////////////////////////////////////////////////////////////
         
-        // TODO 1 : Declare and initialize our variables //
-        var circle;
+    // TODO 1 : Declare and initialize our variables //
+            var circle;
                 
         var circles = [];
 
@@ -35,6 +35,7 @@ var init = function (window) {
          circle.velocityY +=  Math.random() *5;
         }
         
+        //function to draw the circles and don't worry about the velocity. 
         
         
 
@@ -42,7 +43,8 @@ var init = function (window) {
    
 
         // TODO 7 : Create a Loop to call drawCircle 100 times
-        for (var i = 0; i < 400; i++){
+       // this is a loop that draws your circles on the screen. i < num tells you how many circles are going to be drawn.
+        for (var i = 0; i < 1000; i++){
             drawCircle();
         }
     
@@ -73,8 +75,9 @@ var init = function (window) {
                 circle.y = canvas.height + circle.radius;
                 //circle.velocityY = -circle.velocityY;
             }
+                // these lines of code from step 5 are to tell the circles to go to the right side and appear to the left and vice versa
             // YOUR TODO 5 CODE ENDS HERE //////////////////////////
-        }
+        };
     
         var update = function() {
             // TODO 4 : Update the circle's position //
@@ -84,15 +87,15 @@ var init = function (window) {
            for (var i = 0; i < circles.length; i++) {
                runner.checkCircleBounds(circles[i]);
            }
-           
+                //this tells the circle their boundary
            
            
             // TODO 8 : Iterate over the array
            for (var i = 0; i < circles.length; i++) {
                 physikz.updatePosition(circles[i]);
             }
-
-        }
+                //this updates the position of the circles
+        };
         
         ////////////////////////////////////////////////////////////////////
         // NO CODE BELOW HERE                                             //
@@ -104,7 +107,7 @@ var init = function (window) {
         runner.update = update;
         
         app.addUpdateable(window.opspark.runner);
-    }
+    };
 };
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
