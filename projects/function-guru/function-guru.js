@@ -127,7 +127,8 @@ function hasWord(string, word) {
 //////////////////////////////////////////////////////////////////////
 
 function addFriend(name, object) {
-    
+    object.friends.push(name);
+    return object;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -135,7 +136,14 @@ function addFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function isFriend(name, object) {
-
+    if(object.friends){
+        for (var i = 0; i < object.friends.length; i++){
+            if(name === object.friends[i]){
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -143,15 +151,39 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function nonFriends(name, array) {
+    var nameList = [];
+    var nonFriend = [];
+    var current = null;
+    for(var i=0; i<array.length; i++){
+        if(name === array[i].name){
+            current = array[i];
+        }else{
+            nameList.push(array[i].name);
+        }
+    }
 
+    if(current === null){
+        return nameList;
+    }
+
+    for(var i=0; i<nameList.length; i++){
+        if(current.friends.indexOf(nameList[i]) == -1){
+            nonFriend.push(nameList[i]);
+        }
+    }
+
+    return nonFriend;
+    
 }
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
-
+    object[key] = value;
+    return object;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -159,7 +191,13 @@ function updateObject(object, key, value) {
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
-
+  
+    for(var i = 0; i < array.length; i++){
+        delete object[array[i]];
+    }
+    
+    
+    return object;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -167,7 +205,26 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
-
+    var arr = [];
+    for(var i = 0; i < array.length; i++){
+        if(arr.indexOf(array[i]) === -1){
+            arr.push(array[i]);
+        }
+        
+        /** 
+        Instead, we want to push values into the new Array
+        only IF the value being added is not already in the
+        new Array:
+        
+        if value is not in new Array:
+            arr.push(array[i])
+        
+        What method from your library can you use to make this
+        if statement?
+        */
+        
+    }
+    return arr;
 }
 
 //////////////////////////////////////////////////////////////////////

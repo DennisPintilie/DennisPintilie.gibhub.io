@@ -149,7 +149,9 @@ if ((typeof process !== 'undefined') &&
   module.exports.printArrayValuesInReverse = printArrayValuesInReverse;
   module.exports.printObjectValues = printObjectValues;
   module.exports.getObjectKeys = getObjectKeys;
+  module.exports.getObjectValues = getObjectValues;
   module.exports.printObjectKeys = printObjectKeys;
   module.exports.getObjectLength = getObjectLength;
   module.exports.printObjectValuesInReverse = printObjectValuesInReverse;
 }
+
