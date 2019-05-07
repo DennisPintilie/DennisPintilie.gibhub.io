@@ -45,19 +45,92 @@ var oldestCustomer = function(array){
    
 };
 
-var youngestCustomer;
+var youngestCustomer = function(array){
+    
+};
 
-var averageBalance;
+var averageBalance = function(array){
+    var total = 0;
+    _.each(array, function(val, i, col){
+        /* 1) get rid of $ and ,
+        2) turn string into number
+        */
+        total += val.balance;
+    });
+    
+    var avg = total / array.length;
+    
+    return avg;
+};
 
-var firstLetterCount;
+var firstLetterCount = function(array, letter){
+    var arr = _.filter(array, function(val, loc, col){
+        if(array[loc].name.charAt(0).toUpperCase() === letter.toUpperCase()){
+            return true;
+        }else if(array[loc].name.charAt(0).toLowerCase() === letter.toUpperCase()){
+            return true;
+        }else{
+            return false;
+        }
+    });
+    
+    return arr.length;
+};
 
-var friendFirstLetterCount;
+var friendFirstLetterCount = function(array, customer, letter){
+    // first find the customer in the <array> and extract their friends list
+    
+    
+    var arr = _.filter(array, function(val , loc, col){
+        if(array[loc].friends.charAt(0).toUpperCase() === letter){
+            return true;
+        }else if(array[loc].friends.charAt(0).toLowerCase() === letter){
+            return true;
+        }else{
+            return false;
+        }
+    });
+    
+    return arr.length;
+};
 
-var friendsCount;
+var friendsCount = function(array, name){
+    
+};
 
-var topThreeTags;
+var topThreeTags = function(array){
+    
+};
 
-var genderCount;
+var genderCount = function(array){
+    var object = {};
+    var male = _.filter(array, function(val, loc, col){
+        if(array[loc].gender === "male"){
+            return true; 
+        }
+    });
+    
+    object.male = male.length;
+    
+    var female = _.filter(array, function(val, loc, col){
+        if(array[loc].gender === "female"){
+            return true;   
+        }
+    });
+    
+    object.female = female.length;
+    
+    var trans = _.filter(array, function(val, loc, col){
+        if(array[loc].gender === "transgender"){
+            return true;
+        }
+    });
+    
+    object.transgender = trans.length;
+    
+    
+    return object;
+};
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
